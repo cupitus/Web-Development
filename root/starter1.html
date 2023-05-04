@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sell Your Book</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+	<header>
+		<h1>Book for Sale</h1>
+		<nav>
+			<div id="toggle">&#9776</div>
+			<div class="topnav">
+				<div id="myLinks">
+					<a href="#Home">Home</a>
+					<a href="#contact">Contact</a>
+					<a href="#about">About</a>
+				</div>
+				</a>
+			</div>
+		</nav>
+
+	</header>
+
+	<main>
+		<section>
+			<h2>The Narnia's Series</h2>
+			<p>The series is set in the fictional realm of Narnia, a fantasy world of magic, mythical beasts and talking
+				animals. It narrates the adventures of various children who play central roles in the unfolding history
+				of the Narnian world.</p>
+
+			<div class="books">
+				<div class="product">
+					<img src="../image/Book 1.jpg" alt="Ebook cover">
+					<div class="description">
+						<h2>The Chronicles of Narnia</h2>
+						<p>The Magician's Nephew is a fantasy Children's novel by C. S. Lewis, published in 1955 by The
+							Bodley Head. It is the sixth published of seven novels in The Chronicles of Narnia
+							(1950–1956). In recent editions, which sequence the books according to Narnia history, it is
+							volume one of the series. Like the others, it was illustrated by Pauline Baynes whose work
+							has been retained in many later editions. The Bodley Head was a new publisher for The
+							Chronicles, a change from Geoffrey Bles who had published the previous five novels.
+						</p>
+						<p>Price: £20.00</p>
+
+						<button type="button" id="Buy-book1" a href="#payment-section" onclick="openWindow()">Buy
+							Now</button>
+					</div>
+				</div>
+
+				<div class="product">
+					<img src="./Book2.jpg" alt="Ebook cover">
+					<div class="description">
+						<h2>The Lion, the Witch and the Wardrobe</h2>
+						<p>The Magician's Nephew is a fantasy Children's novel by C. S. Lewis, published in
+							1955 by The Bodley Head. It is the sixth published of seven novels in The
+							Chronicles of Narnia (1950–1956). In recent editions, which sequence the books
+							according to Narnia history, it is volume one of the series. Like the others, it
+							was illustrated by Pauline Baynes whose work has been retained in many later
+							editions. The Bodley Head was a new publisher for The Chronicles, a change from
+							Geoffrey Bles who had published the previous five novels.
+						</p>
+						<p>Price: £20.00</p>
+						<button type="button" a href="#payment-section" id="Buy-book2" onclick="openWindow()">Buy
+							Now</button>
+					</div>
+
+				</div>
+
+
+				<div class="product">
+
+					<img src="./book3.jpg" alt="Ebook cover">
+
+					<div class="description">
+						<h2>The Horse and His Boy</h2>
+						<p>Desperate to escape a harsh and narrow regime, two runaways unwittingly flee
+							headlong into the centre of a terrible battle. This first sequel to The
+							Lion, the Witch and the Wardrobe includes all the hallmarks of its famous
+							predecessor, though this time the fate of Narnia is wound up in the lives of
+							its own children, and a talking horse!
+						</p>
+						<p>Price: £20.00</p>
+						<button type="button" id="Buy-book3" a href="#payment-section" onclick="openWindow()">Buy
+							Now</button>
+					</div>
+				</div>
+
+				<div class="product">
+					<img src="./book4.jpg" alt="Ebook cover">
+					<div class="description">
+						<h2>The Silver Chair</h2>
+						<p>The Silver Chair is a children's fantasy novel by C. S. Lewis,
+							published by Geoffrey Bles in 1953. It was the fourth published of
+							seven novels in The Chronicles of Narnia; it is volume six in recent
+							editions, which are sequenced according to Narnian history.
+						</p>
+						<p>Price: £20.00</p>
+
+						<button type="button" id="Buy-book4" a href="#payment-section" onclick="openWindow()">Buy
+							Now</button>
+					</div>
+				</div>
+			</div>
+
+
+
+		</section>
+
+
+
+
+
+
+
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Sell Your Ebook. All rights reserved. By David Agoha</p>
+	</footer>
+	<script>
+		const toggle = document.getElementById("toggle");
+		const x = document.getElementById("myLinks");
+		toggle.addEventListener("click", e => {
+			// this is the function that I am using for the dropdown list
+			if (x.style.display === "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		});
+
+		function openWindow(paymentData) {
+			// opening the payment form using a different html formatt
+			window.open("./payment.html", "self")
+
+		}
+
+
+	</script>
+</body>
+
+</html>
