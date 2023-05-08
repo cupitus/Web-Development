@@ -75,6 +75,8 @@ function sendPaymentData(paymentData) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
+        // Connection between the payment html and success html
+        window.location.href = success.html 
         alert('Payment successful!');
       } else {
         alert('Payment failed. Please try again.');
