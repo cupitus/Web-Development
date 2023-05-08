@@ -19,6 +19,7 @@
 					<a href="#contact">Contact</a>
 					<a href="#about">About</a>
 				</div>
+	
 				</a>
 			</div>
 		</nav>
@@ -27,10 +28,16 @@
 
 	<main>
 		<section>
+			<div class="search-container">
+				<input type="text" id="searchInput" class="search-input" placeholder="Search for a book...">
+				<button id="searchButton" class="search-button" onclick="searchBooks()">Search</button>
+			</div>
+
 			<h2>The Narnia's Series</h2>
 			<p>The series is set in the fictional realm of Narnia, a fantasy world of magic, mythical beasts and talking
 				animals. It narrates the adventures of various children who play central roles in the unfolding history
-				of the Narnian world.</p>
+				of the Narnian world.
+			</p>
 
 			<div class="books">
 				<div class="product">
@@ -141,6 +148,22 @@
 			// opening the payment form using a different html formatt
 			window.open("./payment.html", "self")
 
+		}
+
+
+		function searchBooks() {
+			const searchInput = document.getElementById("searchInput").value.toLowerCase();
+			const products = document.querySelectorAll(".product");
+		
+
+			products.forEach(product => {
+				const title = product.querySelector(".description h2").innerText.toLowerCase();
+				if (title.includes(searchInput)) {
+					product.style.display = "block";
+				} else {
+					product.style.display = "none";
+				}
+			});
 		}
 
 	</script>
