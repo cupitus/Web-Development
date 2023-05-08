@@ -19,6 +19,7 @@ for (let i = 0; i < 10; i++) {
   expirationYearSelect.appendChild(option);
 }
 
+
 form.addEventListener('submit', handleFormSubmit);
 
 function handleFormSubmit(event) {
@@ -66,6 +67,8 @@ function isValidSecurityCode(securityCode) {
 }
 
 
+
+
 function sendPaymentData(paymentData) {
   const url = 'https://mudfoot.doc.stu.mmu.ac.uk/node/api/creditcard';
   const data = JSON.stringify(paymentData);
@@ -76,8 +79,10 @@ function sendPaymentData(paymentData) {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         // Connection between the payment html and success html
-        window.location.href = success.html 
-        alert('Payment successful!');
+        const cardNumber = paymentData.master_card;
+        const lastFourDigits = cardNumber.substr(cardNumber.length - 4);
+        window.open('success.html?digits='+lastFourDigits, '_blank')
+        // alert('Payment successful!');
       } else {
         alert('Payment failed. Please try again.');
       }
@@ -153,7 +158,5 @@ function isValidSecurityCode(securityCode) {
   const regex = /^\d{3,4}$/;
   return regex.test(securityCode);
 }
-
-
 
 
