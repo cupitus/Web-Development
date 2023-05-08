@@ -112,9 +112,9 @@ button {
 }
 
 #payment-form {
-	padding: 20px;
-	gap: 2 rem;
-	display: none;
+	padding: 40px;
+	gap: 14 rem;
+	display: show;
 }
 
 p {
@@ -125,7 +125,9 @@ p {
 	margin-right: 0; */
 
 }
-
+.pay-button{	/* trying to find some gaps  */
+	gap: 4 rem; 
+}
 .column {
 	float: left;
 	width: 50%;
@@ -233,27 +235,27 @@ p {
 }
 
 
-
+/* Success.html CSS */
 .Success-B {
 	text-align: center;
 	padding: 40px 0;
 	background: #EBF0F5;
   }
   .Success-h1 {
-	  color: #88B04B;
+	  color: #f08407;
 	  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
 	  font-weight: 900;
 	  font-size: 40px;
 	  margin-bottom: 10px;
 	}
-	p {
+	.psuccess {
 	  color: #404F5E;
 	  font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
 	  font-size:20px;
 	  margin: 0;
 	}
-  i {
-	color: #9ABC66;
+  .checkmark {
+	color: #f08407;
 	font-size: 100px;
 	line-height: 200px;
 	margin-left:-15px;
