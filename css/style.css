@@ -141,7 +141,10 @@ p {
 	margin-bottom: 5px;
 }
 
-
+footer {
+	height: 50px; /* set the height of your footer */
+	margin-top: auto; /* push the footer to the bottom */
+  }
 /* #expiration-year{
     padding-right: 40px;
 }

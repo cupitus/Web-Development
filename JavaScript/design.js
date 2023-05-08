@@ -90,7 +90,7 @@ function sendPaymentData(paymentData) {
 const monthDropdown = document.querySelector('#expiration-month');
 const Monthoption = document.createElement('option');
 for (let i = 1; i <= 12; i++) {
-  // const option = document.createElement('option');
+  const option = document.createElement('option');
   Monthoption.text = i.toString().padStart(2, '0');
   Monthoption.value = i.toString().padStart(2, '0');
   monthDropdown.appendChild(option);
