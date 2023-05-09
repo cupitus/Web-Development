@@ -94,8 +94,9 @@ function sendPaymentData(paymentData) {
 // Generate dropdown options for the expiration month
 const monthDropdown = document.querySelector('#expiration-month');
 const Monthoption = document.createElement('option');
+const option = document.createElement('option');
 for (let i = 1; i <= 12; i++) {
-  const option = document.createElement('option');
+  // const option = document.createElement('option');
   Monthoption.text = i.toString().padStart(2, '0');
   Monthoption.value = i.toString().padStart(2, '0');
   monthDropdown.appendChild(option);
@@ -104,7 +105,7 @@ for (let i = 1; i <= 12; i++) {
 // Generate dropdown options for the expiration year
 const yearDropdown = document.querySelector('#expiration-year');
 // const currentYear = new Date().getFullYear();
-const option = document.createElement('option');
+// const option = document.createElement('option');
 for (let i = currentYear; i <= currentYear + 10; i++) {
   option.text = i.toString();
   option.value = i.toString().substr(2, 2);
@@ -134,7 +135,7 @@ function handleFormSubmit(event) {
 
     sendPaymentData(paymentData);
   } else {
-    alert('Please fill in the form correctly.');
+    alert('Payment failed. Please try again.');
   }
 }
 
